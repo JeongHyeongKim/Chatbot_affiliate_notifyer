@@ -1,0 +1,2 @@
+class Lifescience < ApplicationRecord
+end

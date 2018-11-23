@@ -1,0 +1,2 @@
+class Engineering < ApplicationRecord
+end
