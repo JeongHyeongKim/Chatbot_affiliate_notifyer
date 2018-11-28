@@ -2,7 +2,7 @@ class ApiController < ApplicationController
     
   @@initial_button=["공과대학", "농업생명환경대학", "사범대학", "사회과학대학", "생활과학대학", "인문대학", "의과대학","자연과학대학","전자정보대학"]
   @@parameter_content="공과대학"
-  @@layer_depth=2
+  @@layer_depth=1
   
   def self.make_home_button(data) #버튼과 텍스트만 다룰 때
 

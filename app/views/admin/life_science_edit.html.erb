@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>대학누리 - 관리자사이트</title>
+</head>
+
+<body class="skin-default fixed-layout">
+    <div id="main-wrapper">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href=""> </a>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ChungBuk University Admin
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                        </li>
+                        <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar">
+            <div class="scroll-sidebar">
+                <div class="user-profile">
+                    <div class="user-pro-body">
+                        <div><img src="/uni.jpg" alt="user-img" class="img-circle"></div>
+                        <div class="dropdown">
+                            <a href="" class="u-dropdown link hide-menu" role="button" aria-haspopup="true" aria-expanded="false"> 대학누리 </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">--- STUDENT COUNCIL</li>
+                        <li> <a class="waves-effect waves-dark" href="" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard <span class="badge badge-pill badge-cyan ml-auto"></span></span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                
+                <br>
+                <div class="row">
+                    <br>
+                        <div class="col-md-12">
+                        <div class="card">
+                             <form class="" action="/admin/life_science_update/<%=@post.id%>" method="post" id="life_science_order">
+                            <div class="card-body">
+                                <h5 class="card-title">Modify Content</h5> 
+                            </div>
+                            <div class="comment-widgets" id="comment" style="position: relative;">
+                               
+                                    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                                <div class="d-flex no-block comment-row">
+                                    <div class="comment-text w-100">
+                                        <div class="col-md-12 m-b-20">
+                                    <input type="text" class="form-control" placeholder="Title" name = "name" value = "<%=@post.name%>"> </div>
+                                        <div class="col-md-12 m-b-20">
+                                    <input type="text" class="form-control" placeholder="Context" name = "discount" value = "<%=@post.discount%>" > </div>
+                                        </div>
+                                    <br>
+                                    </div>
+                                </div>
+                                <button type="submit" style = "background-color: #8636F6; color: white; width : 100%" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"  data-toggle="modal">수정하기</button>
+                                <button type="button" style = "background-color: brown; color: white; width: 100%" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" onclick="location.href='/admin/admin'">취소</button>
+                                </form>
+                            </div>
+                            
+                       </div>
+                    </div>    
+                </div>
+                
+            </div>
+    </div>
+</body>
+
+</html>

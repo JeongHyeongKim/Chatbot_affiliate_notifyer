@@ -1,5 +1,47 @@
 Rails.application.routes.draw do
   
+  get 'admin/admin' => 'admin#admin'
+  post 'admin/engineering_order' => 'admin#engineering_order'
+  post 'admin/agriculture_order' => 'admin#agriculture_order'
+  post 'admin/electronic_order' => 'admin#electronic_order'
+  post 'admin/humanity_order' => 'admin#humanity_order'
+  post 'admin/medical_order' => 'admin#medical_order'
+  post 'admin/social_order' => 'admin#social_order'
+  post 'admin/teacher_order' => 'admin#teacher_order'
+  post 'admin/life_science_order' => 'admin#life_science_order'
+  post 'admin/natural_order' => 'admin#natural_order'
+
+  get 'admin/engineering_edit/:post_id' => 'admin#engineering_edit'
+  get 'admin/agriculture_edit/:post_id' => 'admin#agriculture_edit'
+  get 'admin/electronic_edit/:post_id' => 'admin#electronic_edit'
+  get 'admin/humanity_edit/:post_id' => 'admin#humanity_edit'
+  get 'admin/medical_edit/:post_id' => 'admin#medical_edit'
+  get 'admin/social_edit/:post_id' => 'admin#social_edit'
+  get 'admin/teacher_edit/:post_id' => 'admin#teacher_edit'
+  get 'admin/life_science_edit/:post_id' => 'admin#life_science_edit'
+  get 'admin/natural_edit/:post_id' => 'admin#natural_edit'
+  
+  post 'admin/engineering_update/:post_id' => 'admin#engineering_update'
+  post 'admin/agriculture_update/:post_id' => 'admin#agriculture_update'
+  post 'admin/electronic_update/:post_id' => 'admin#electronic_update'
+  post 'admin/humanity_update/:post_id' => 'admin#humanity_update'
+  post 'admin/medical_update/:post_id' => 'admin#medical_update'
+  post 'admin/social_update/:post_id' => 'admin#social_update'
+  post 'admin/teacher_update/:post_id' => 'admin#teacher_update'
+  post 'admin/life_science_update/:post_id' => 'admin#life_science_update'
+  post 'admin/natural_update/:post_id' => 'admin#natural_update'
+  
+  get 'admin/engineering_destroy/:post_id' => 'admin#engineering_destroy'
+  get 'admin/agriculture_destroy/:post_id' => 'admin#agriculture_destroy'
+  get 'admin/electronic_destroy/:post_id' => 'admin#electronic_destroy'
+  get 'admin/humanity_destroy/:post_id' => 'admin#humanity_destroy'
+  get 'admin/medical_destroy/:post_id' => 'admin#medical_destroy'
+  get 'admin/social_destroy/:post_id' => 'admin#social_destroy'
+  get 'admin/teacher_destroy/:post_id' => 'admin#teacher_destroy'
+  get 'admin/life_science_destroy/:post_id' => 'admin#life_science_destroy'
+  get 'admin/natural_destroy/:post_id' => 'admin#natural_destroy'
+  
+  
   get '/keyboard' => 'api#api_init'
   post '/message' => 'api#api_message'
   # The priority is based upon order of creation: first created -> highest priority.
